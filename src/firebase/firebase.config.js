@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCWfRTKDPCg_wz5hgtLv3n9b_77Jk0dbUE",
-  authDomain: "chef-crew-client.firebaseapp.com",
-  projectId: "chef-crew-client",
-  storageBucket: "chef-crew-client.appspot.com",
-  messagingSenderId: "1023165640845",
-  appId: "1:1023165640845:web:94639fcdc1930ce7f1f2c4"
+  apiKey: "AIzaSyBrCpNp7PPiAoU_b9dj6xdETGHsRAQ8hWk",
+  authDomain: "side-chef-client.firebaseapp.com",
+  projectId: "side-chef-client",
+  storageBucket: "side-chef-client.appspot.com",
+  messagingSenderId: "241543453914",
+  appId: "1:241543453914:web:26c746719ec3d2cb5219e3"
 };
 
 // Initialize Firebase
