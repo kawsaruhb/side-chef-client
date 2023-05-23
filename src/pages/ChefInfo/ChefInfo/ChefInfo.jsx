@@ -35,7 +35,72 @@ const ChefInfo = ({ data }) => {
 
             {/*------------------------------------------ recipes -----------------------------------------*/}
 
-            
+            <div className='flex justify-between'>
+                <div className="card w-80 shadow-xl mt-6 bg-red-50">
+                    <figure className="px-8 pt-8">
+                        <img src={recipe1.recipe_img} alt="Shoes" className="rounded-xl" />
+                    </figure>
+                    <div className="card-body ">
+                        <h2 className="card-title text-black text-2xl font-bold">{recipe1.recipe_name}</h2>
+                        <h6 className='text-black text-'><span className='font-semibold'>Ingredients: </span>{recipe1.ingredients}</h6>
+                        <h6 className='text-black text-'><span className='font-semibold'>Method: </span>{recipe1.method}</h6>
+                        <p> { }</p>
+
+                        <div className='flex justify-between'>
+                            <Rating style={{ maxWidth: 100 }} value={recipe1.rating.number} readOnly />
+                            <button onClick={handleClick} disabled={isDisabled} className="btn bg-pink-500 btn-xs w-16 border-none ms-20">
+                                Fav
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </button>
+                            <ToastContainer></ToastContainer>
+                        </div>
+                    </div>
+                </div>
+
+                {/* --------------------------- 2 ---------------------------- */}
+
+                <div className="card w-80 shadow-xl mt-6 bg-red-50">
+                    <figure className="px-8 pt-8">
+                        <img src={recipe2.recipe_img} alt="Shoes" className="rounded-xl" />
+                    </figure>
+                    <div className="card-body ">
+                        <h2 className="card-title text-black text-2xl font-bold">{recipe2.recipe_name}</h2>
+                        <h6 className='text-black text-'><span className='font-semibold'>Ingredients: </span>{recipe2.ingredients}</h6>
+                        <h6 className='text-black text-'><span className='font-semibold'>Method: </span>{recipe2.method}</h6>
+
+                        <div className='flex justify-between'>
+                            <Rating style={{ maxWidth: 100 }} value={recipe2.rating.number} readOnly />
+                            <button onClick={handleClick} disabled={isDisabled} className="btn bg-pink-500 btn-xs w-16 border-none ms-20">
+                                Fav
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </button>
+                            <ToastContainer></ToastContainer>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ------------------------- 3 ---------------------------- */}
+
+                <div className="card w-80 shadow-xl mt-6 bg-red-50">
+                    <figure className="px-8 pt-8">
+                        <img src={recipe3.recipe_img} alt="Shoes" className="rounded-xl" />
+                    </figure>
+                    <div className="card-body ">
+                        <h2 className="card-title text-black text-2xl font-bold">{recipe3.recipe_name}</h2>
+                        <h6 className='text-black text-'><span className='font-semibold'>Ingredients: </span>{recipe3.ingredients}</h6>
+                        <h6 className='text-black text-'><span className='font-semibold'>Method: </span>{recipe3.method}</h6>
+
+                        <div className='flex justify-between'>
+                            <Rating style={{ maxWidth: 100 }} value={recipe3.rating.number} readOnly />
+                            <button onClick={handleClick} disabled={isDisabled} className="btn bg-pink-500 btn-xs w-16 border-none ms-20">
+                                Fav
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                            </button>
+                            <ToastContainer></ToastContainer>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     );
