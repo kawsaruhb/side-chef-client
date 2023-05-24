@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../provider/AuthProvider';
 
 const Header = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
         // ------------------------------ Navbar ----------------------------------- // 
+
         <div>
             <div className="container mx-auto navbar bg-base-100 flex justify-between">
                 <div>
@@ -14,14 +19,27 @@ const Header = () => {
                     <Link className='mx-2 p-3 font-bold text-black'>Explore More</Link>
                 </div>
                 <div>
-                    <button className="btn btn-active rounded-full font-bold mx-6 px-6 py-0">Sign Up</button>
-                    <button className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign In</button>
+                    {
+                        user && <div className="w-12">
+                            <img className='rounded-full' src="https://i.pravatar.cc/350" />
+                        </div>
+                    }
+
+                    {user ?
+                        <button className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign Out</button> :
+                        <Link to='/login'>
+                            <button className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign In</button>
+                        </Link>
+                    }
+                    { !user ?
+                        <Link to='/register'><button className="btn btn-active rounded-full font-bold mx-6 px-6 py-0">Sign Up</button></Link> : <h6></h6>
+                    }
                 </div>
             </div>
 
             {/* --------------------------- Banner --------------------------------- */}
 
-            
+
         </div>
     );
 };

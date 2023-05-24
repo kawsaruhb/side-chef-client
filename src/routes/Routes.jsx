@@ -4,8 +4,12 @@ import Home from "../pages/Home/Home";
 import AllChefs from "../pages/AllChefs/AllChefs";
 import ChefDetails from "../layout/ChefDetails";
 import ChefInfo from "../pages/ChefInfo/ChefInfo/ChefInfo";
+import LoginLayout from "../layout/LoginLayout";
+import Login from "../pages/LoginRegister/Login/Login";
+import Register from "../pages/LoginRegister/Register/Register";
 
 const router = createBrowserRouter([
+
     {
         path: '/',
         element: <Main></Main>,
@@ -33,7 +37,23 @@ const router = createBrowserRouter([
                 
             }
         ]
-    }
+    },
+
+    {
+        path: '/',
+        element: <LoginLayout></LoginLayout>,
+        children: [
+            
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            }
+        ]
+    },
 ])
 
 export default router;
