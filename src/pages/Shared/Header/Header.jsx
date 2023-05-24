@@ -4,7 +4,13 @@ import { AuthContext } from '../../../provider/AuthProvider';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user,logout } = useContext(AuthContext);
+
+    const handleLogout = () =>{
+        logout()
+        .then()
+        .catch(error => console.log(error))
+    }
 
     return (
         // ------------------------------ Navbar ----------------------------------- // 
@@ -20,13 +26,13 @@ const Header = () => {
                 </div>
                 <div>
                     {
-                        user && <div className="w-12">
+                        user && <div className="w-12 me-2">
                             <img className='rounded-full' src="https://i.pravatar.cc/350" />
                         </div>
                     }
 
                     {user ?
-                        <button className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign Out</button> :
+                        <button onClick={handleLogout} className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign Out</button> :
                         <Link to='/login'>
                             <button className="btn btn-active bg-white text-black font-bold px-6 py-0 rounded-full">Sign In</button>
                         </Link>
