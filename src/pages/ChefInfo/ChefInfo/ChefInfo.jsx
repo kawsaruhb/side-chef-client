@@ -44,7 +44,6 @@ const ChefInfo = ({ data }) => {
                         <h2 className="card-title text-black text-2xl font-bold">{recipe1.recipe_name}</h2>
                         <h6 className='text-black text-'><span className='font-semibold'>Ingredients: </span>{recipe1.ingredients}</h6>
                         <h6 className='text-black text-'><span className='font-semibold'>Method: </span>{recipe1.method}</h6>
-                        <p> { }</p>
 
                         <div className='flex justify-between'>
                             <Rating style={{ maxWidth: 100 }} value={recipe1.rating.number} readOnly />

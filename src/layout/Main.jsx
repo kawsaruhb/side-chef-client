@@ -4,12 +4,14 @@ import Footer from '../pages/Shared/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import AllChefs from '../pages/AllChefs/AllChefs';
 import Banner from '../pages/Shared/Header/Banner';
+import TrendingNow from '../pages/TrendingNow/TrendingNow';
 
 const Main = () => {
     return (
         <div>
             <Header></Header>
             <Banner></Banner>
+            <TrendingNow></TrendingNow>
             <AllChefs></AllChefs>
             <Footer></Footer>
             <Outlet></Outlet>
