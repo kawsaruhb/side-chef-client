@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
@@ -11,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    const [error, setError] = useState('');
 
     const handleSignIn = event => {
         event.preventDefault();
@@ -27,6 +28,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error);
+                setError(error.message);
             })
     }
 
@@ -40,7 +42,10 @@ const Login = () => {
             const user = result.user;
             console.log(user);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error);
+            setError(error.message);
+        })
     }
 
     // ---------------------------------- Github ------------------------------------ //
@@ -52,7 +57,10 @@ const Login = () => {
             const githubUser = result.githubUser;
             console.log(githubUser);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error);
+            setError(error.message);
+        })
     }
 
     return (
@@ -75,7 +83,7 @@ const Login = () => {
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <p className="text-red-500">{error}</p>
                                 </label>
                             </div>
 
