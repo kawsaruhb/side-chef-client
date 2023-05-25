@@ -58,7 +58,7 @@ const Register = () => {
                                 <span className="label-text font-bold text-lg">Password</span>
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                            <h6 className='text-sm  mt-2'>Already have an account? <Link to='/login'><span className='underline text-blue-500'>Sign In</span></Link></h6>
+                            <h6 className='text-sm  mt-2'>Already have an account? <Link to='/login'><span className='underline text-blue-500'>SignIn</span></Link></h6>
                         </div>
 
                         <div className="form-control mt-6">
