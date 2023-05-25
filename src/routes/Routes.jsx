@@ -9,6 +9,7 @@ import Login from "../pages/LoginRegister/Login/Login";
 import Register from "../pages/LoginRegister/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import BlogsLayout from "../layout/BlogsLayout";
+import NotFoundLayout from "../layout/NotFoundLayout";
 
 const router = createBrowserRouter([
 
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
     {
         path: '/blogs',
         element: <BlogsLayout></BlogsLayout>
+    },
+    {
+        path: '*',
+        element: <NotFoundLayout></NotFoundLayout>
     }
 ])
 
