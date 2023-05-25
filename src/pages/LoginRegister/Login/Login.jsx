@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../../firebase/firebase.config';
 
 const Login = () => {
 
@@ -19,11 +21,25 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                form.reset();
                 navigate(from, {replace: true});
             })
             .catch(error => {
                 console.log(error);
             })
+    }
+
+    // ------------------------------- Google Login ---------------------------- //
+
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () =>{
+        signInWithPopup(auth, provider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => console.log(error))
     }
 
     return (
@@ -52,6 +68,9 @@ const Login = () => {
 
                             <div className="form-control mt-6">
                                 <button className="btn bg-black">Sign In</button>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button onClick={handleGoogleSignIn} className="btn btn-primary border-none bg-blue-600">Sign In with Google</button>
                             </div>
                         </form>
 
