@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../provider/AuthProvider';
+import ActiveLink from '../../../ActiveLink/ActiveLink';
 
 const Header = () => {
 
@@ -18,10 +19,10 @@ const Header = () => {
         <div>
             <div className="container mx-auto navbar bg-base-100 flex justify-between">
                 <div>
-                    <Link to='/' className="btn btn-ghost normal-case text-black text-3xl font-bold">SideChef</Link>
-                    <Link to='/' className='mx-2 p-3 font-bold text-black'>Home</Link>
-                    <Link className='mx-2 p-3 font-bold text-black'>Recipes</Link>
-                    <Link className='mx-2 p-3 font-bold text-black'>Blog</Link>
+                    <Link to='/' className="btn btn-ghost me-3 normal-case text-black text-3xl font-bold">SideChef</Link>
+                    <ActiveLink to='/' className='mx-2 p-3 font-bold text-black'>Home</ActiveLink>
+                    <ActiveLink to='/blogs'className='mx-2 p-3 font-bold text-black'>Blog</ActiveLink>
+                    <Link className='mx-2 p-3 font-bold text-black'>Recipes</Link>             
                     <Link className='mx-2 p-3 font-bold text-black'>Explore More</Link>
                 </div>
                 <div>

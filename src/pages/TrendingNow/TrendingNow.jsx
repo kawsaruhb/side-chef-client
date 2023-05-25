@@ -6,7 +6,7 @@ const TrendingNow = () => {
         <div>
             <div className='ms-28 mt-10 mb-8'>
                 <h2 className='text-2xl font-bold text-black mb-1'>Trending Now</h2>
-                <h6>Most popular recipes everyone is loving right now.</h6>
+                <h6 className='text-lg text-black'>Most popular recipes everyone is loving right now.</h6>
             </div>
 
             <div className='flex justify-center gap-9 container mx-auto px-4 mt-4 mb-16'>

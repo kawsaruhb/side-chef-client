@@ -9,8 +9,8 @@ const Banner = () => {
                 <div className="absolute bottom-20 px-20 ">
                     <p className='text-white w-40 rounded mb-4 text-sm font-semibold text-center bg-[#A53d02]'>WEEKLY INSPIRATION</p>
                     <h1 className="text-[#A53d02] font-bold text-5xl"> Fire Up the Grill: Unleash <br /> Your Inner BBQ Chef </h1>
-                    <p className="text-white w-60 rounded-full mt-8 p-3 font-semibold text-center bg-[#A53d02]">Best BBQ Recipes</p>
-                    <p className="text-white w-72 rounded-full mt-4 p-3 font-semibold text-center bg-[#A53d02]">Most Popular Recipes</p>
+                    <p className="text-white w-60 rounded-full mt-8 p-3 font-semibold text-center bg-[#A53d02]">Best Mexican Recipes</p>
+                    <p className="text-white w-72 rounded-full mt-4 p-3 font-semibold text-center bg-[#A53d02]">Try Mexican Traditional</p>
                 </div>
             </div>
         </div>
